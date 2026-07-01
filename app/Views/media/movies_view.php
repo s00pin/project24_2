@@ -1,136 +1,73 @@
-<div class="full-page" style="background-image: url('https://image.tmdb.org/t/p/original/<?= esc($media['background_image']) ?>'); background-size: cover; background-position: center;"></div>
-<?php $movie_id = $media['id']; ?>
-<div class="container details-container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-4">
-            <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<?= esc($media['poster_image']) ?>" class="img-fluid bi mt-4 mb-3 rounded" alt="Poster">
-        </div>
-        <div class="col-md-8">
-            <div class="p-4  bg-body-tertiary rounded-3">
-                <h1 class="text-body-emphasis text-center"><?= esc($media['title']) ?></h1>
-                <p class=" mx-1 fs-5 text-muted">
-                <?= esc($media['overview']) ?>
-                </p>
-            </div>
-        </div>
-        <div class="col-lg-12 mx-auto fs-5 text-muted  bg-body-tertiary rounded-3 mt-2" style="bacground-color: #F5E8DD;">
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <p><strong>Release Date:</strong><?= esc($media['release_date']) ?></p>
-                        <p><strong>Language:</strong> <?= esc($media['original_language']) ?></p>
-                    </div>
-                    <div class="col-md-6">
-                        <p><strong>Genre:</strong> <?= esc($media['genre']) ?></p>  
-                    </div>
-                    
+<?php
+$isLoggedIn = (bool) session()->get('logged_in');
+$activeListIds = array_map('intval', $activeListIds ?? []);
+?>
+<section class="detail-shell detail-modern">
+    <div class="detail-backdrop" style="background-image:url('https://image.tmdb.org/t/p/original/<?= esc(ltrim((string) ($media['background_image'] ?? ''), '/')) ?>')"></div>
+
+    <div class="detail-content js-title-detail" data-media-type="media" data-media-id="<?= esc((string) $media['id']) ?>">
+        <div class="detail-header-row">
+            <img src="https://image.tmdb.org/t/p/w500/<?= esc(ltrim((string) ($media['poster_image'] ?? ''), '/')) ?>" alt="<?= esc($media['title']) ?> poster" class="detail-poster">
+
+            <div class="detail-main">
+                <p class="detail-type">Movie</p>
+                <h2><?= esc($media['title']) ?></h2>
+                <p class="text-light-emphasis detail-overview"><?= esc($media['overview']) ?></p>
+
+                <div class="meta-list">
+                    <div class="meta-pill"><strong>Release</strong><br><?= esc($media['release_date']) ?></div>
+                    <div class="meta-pill"><strong>Language</strong><br><?= esc($media['original_language']) ?></div>
+                    <div class="meta-pill"><strong>Genre</strong><br><?= esc($media['genre']) ?></div>
+                    <div class="meta-pill"><strong>Likes</strong><br><span id="likes-count"><?= esc((string) $likesCount) ?></span></div>
                 </div>
+
+                <?php if ($isLoggedIn): ?>
+                    <div class="detail-actions mt-3">
+                        <button
+                            class="btn list-action-btn like-btn <?= !empty($isLiked) ? 'is-active' : '' ?>"
+                            type="button"
+                            data-like-toggle="1"
+                            data-media-type="media"
+                            data-media-id="<?= esc((string) $media['id']) ?>"
+                        >
+                            <?= !empty($isLiked) ? 'Liked' : 'Like' ?>
+                        </button>
+
+                        <div class="list-dropdown" data-list-dropdown="1">
+                            <button class="btn list-action-btn alt list-dropdown-toggle" type="button">Add to Lists</button>
+                            <div class="list-dropdown-menu">
+                                <?php foreach (($userLists ?? []) as $list): ?>
+                                    <?php $lid = (int) $list['id']; ?>
+                                    <button
+                                        class="list-option <?= in_array($lid, $activeListIds, true) ? 'active' : '' ?>"
+                                        type="button"
+                                        data-list-option="1"
+                                        data-list-id="<?= esc((string) $lid) ?>"
+                                        data-media-type="media"
+                                        data-media-id="<?= esc((string) $media['id']) ?>"
+                                    >
+                                        <span><?= esc($list['name']) ?></span>
+                                        <span class="list-option-mark"><?= in_array($lid, $activeListIds, true) ? 'Added' : 'Add' ?></span>
+                                    </button>
+                                <?php endforeach; ?>
+                                <a href="<?= base_url('dashboard') ?>" class="list-manage-link">Manage all lists</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="action-feedback mt-2 mb-0" id="list-feedback"></p>
+                <?php else: ?>
+                    <div class="auth-gate">
+                        <p class="mb-2">Sign in to like this title and add it to your custom lists.</p>
+                        <a href="<?= base_url('login') ?>" class="btn btn-sm btn-outline-light">Login to unlock</a>
+                    </div>
+                <?php endif; ?>
             </div>
-            <div class="col-lg-12 mx-auto fs-5 text-muted  bg-body-tertiary rounded-3 mt-2 fst-italic">
-                <div class="row mt-3">
-                <h4>You can find this in :</h4>
-                    <div id="watch-providers">Loading...</div>
-                </div>
-            </div>
+        </div>
+
+        <section class="providers-wrap mt-3">
+            <h3 class="providers-title">Where to watch in your region</h3>
+            <div class="providers-status" id="providers-status">Waiting for consent to use cookies and location.</div>
+            <div class="providers-grid" id="providers-grid"></div>
+        </section>
     </div>
-</div>
-
-<script>
-if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            showPosition,
-            showError,
-            { timeout: 10000, enableHighAccuracy: true }
-        );
-    } else {
-        console.error("Geolocation is not supported by this browser.");
-    }
-
-    function showPosition(position) {
-        const latitude = position.coords.latitude;
-        const longitude = position.coords.longitude;
-
-        fetchRegionAndWatchProviders(latitude, longitude); // Function defined previously
-    }
-
-    function showError(error) {
-        console.error("Geolocation error:", error);
-    }
-
-    function fetchRegionAndWatchProviders(latitude, longitude) {
-  // API endpoint for reverse geocoding
-    const reverseGeocodeUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
-
-    // Fetch the region based on geolocation
-    fetch(reverseGeocodeUrl)
-        .then(response => response.json())
-        .then(data => {
-        const countryCode = data.countryCode; // Get the country code from geocoding
-        fetchWatchProviders(countryCode); // Fetch watch providers based on country code
-        })
-        .catch(error => {
-        console.error("Error fetching region:", error);
-        });
-    }
-    
-
-    
-    function fetchWatchProviders(countryCode) {
-        
-            const movieId = <?= json_encode($movie_id) ?>; 
-            const apiUrl = `https://api.themoviedb.org/3/movie/${movieId}/watch/providers`;
-
-            // Define options for the fetch request
-            const options = {
-                    method: 'GET',
-                    headers: {
-                            accept: 'application/json',
-                            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmM2ZkMmM1ODhmNjViMzVlYjA4ZjRkMTliYzJmYWJiMyIsInN1YiI6IjY2MjVlYmZlNjNlNmZiMDE3ZWZjOTE1MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Qb_NLScHpCLLeyTLteXvhFN273YvCBESB-vRw4O44iI'
-                    },
-            };
-
-            // Check if the watch providers are already in cache
-            const cacheKey = `watchProviders_${movieId}_${countryCode}`;
-            const cachedData = localStorage.getItem(cacheKey);
-
-            if (cachedData) {
-                    const watchProvidersDiv = document.getElementById('watch-providers');
-                    watchProvidersDiv.innerHTML = cachedData; // Display the cached watch providers
-            } else {
-                    fetch(apiUrl, options)
-                            .then(response => response.json())
-                            .then(data => {
-                                    const watchProvidersDiv = document.getElementById('watch-providers'); // The target div to display the results
-
-                                    if (data.results[countryCode]) {
-                                            const regionData = data.results[countryCode];
-                                            console.log(regionData)
-                                            let content = '<ul>';
-
-                                            if (regionData.flatrate) {
-                                                    content += `<li>Flatrate: ${regionData.flatrate.map(p => p.provider_name).join(', ')}</li>`;
-                                            }
-
-                                            if (regionData.ads) {
-                                                    content += `<li>Ads: ${regionData.ads.map(p => p.provider_name).join(', ')}</li>`;
-                                            }
-
-                                            if (regionData.buy) {
-                                                    content += `<li>Buy: ${regionData.buy.map(p => p.provider_name).join(', ')}</li>`;
-                                            }
-
-                                            content += '</ul>';
-                                            watchProvidersDiv.innerHTML = content; // Display the watch providers section
-
-                                            // Save the watch providers in cache
-                                            localStorage.setItem(cacheKey, content);
-                                    } else {
-                                            watchProvidersDiv.innerHTML = 'No watch providers found for this region.';
-                                    }
-                            })
-                            .catch(error => {
-                                    console.error("Error fetching watch providers:", error);
-                                    watchProvidersDiv.innerText = 'Error loading watch providers.';
-                            });
-            }
-    }
-</script>
+</section>

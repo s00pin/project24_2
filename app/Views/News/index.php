@@ -1,22 +1,23 @@
-<h2><?= esc($title) ?></h2>
 <?php if (!empty($news) && is_array($news)): ?>
-    <?php foreach ($news as $news_item): ?>
-        <div>
-            <h3><?= esc($news_item['title']) ?></h3>
-            <div class="main">
-                <?= esc($news_item['body']) ?>
-            </div>
-            <p>
-                <a href="/news/<?= esc($news_item['slug'], 'url') ?>">View article</a> | 
-                <a href="/news/edit/<?= esc($news_item['id']) ?>">Edit</a> | 
-                <form action="/news/delete/<?= esc($news_item['id']) ?>" method="post" style="display:inline">
-                    <?= csrf_field() ?>
-                    <button type="submit" onclick="return confirm('Are you sure you want to delete this item?')">Delete</button>
-                </form>
-            </p>
-        </div>
-    <?php endforeach ?>
+    <div class="d-grid gap-3">
+        <?php foreach ($news as $news_item): ?>
+            <article class="glass-card p-4">
+                <h3><?= esc($news_item['title']) ?></h3>
+                <p class="mb-3"><?= esc($news_item['body']) ?></p>
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="btn btn-sm btn-outline-light" href="/news/<?= esc($news_item['slug'], 'url') ?>">View</a>
+                    <a class="btn btn-sm btn-outline-light" href="/news/edit/<?= esc($news_item['id']) ?>">Edit</a>
+                    <form action="/news/delete/<?= esc($news_item['id']) ?>" method="post">
+                        <?= csrf_field() ?>
+                        <button class="btn btn-sm btn-outline-danger" type="submit" onclick="return confirm('Delete this item?')">Delete</button>
+                    </form>
+                </div>
+            </article>
+        <?php endforeach ?>
+    </div>
 <?php else: ?>
-    <h3>No News</h3>
-    <p>Unable to find any news for you.</p>
+    <div class="glass-card p-4">
+        <h3>No News</h3>
+        <p class="mb-0">Unable to find any news for you.</p>
+    </div>
 <?php endif ?>

@@ -1,1 +1,1 @@
-<p>This*** is home page</p>
+<p>Welcome to Project24.</p>

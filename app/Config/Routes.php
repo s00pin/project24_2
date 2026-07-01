@@ -8,14 +8,28 @@ use App\Controllers\Movies;
 use App\Controllers\Media;
 use App\Controllers\Show;
 use App\Controllers\Search;
+use App\Controllers\AuthController;
+use App\Controllers\DashboardController;
+use App\Controllers\UserListController;
+use App\Controllers\WatchProvidersController;
+use App\Controllers\LikeController;
 /**
  * @var RouteCollection $routes
  */
 
-$routes->get('/login', 'AuthController::login');
-$routes->post('/login', 'AuthController::login');
-$routes->get('/logout', 'AuthController::logout');
-$routes->get('/dashboard', 'DashboardController::index', ['filter' => 'auth']);
+$routes->get('login', [AuthController::class, 'login']);
+$routes->post('login', [AuthController::class, 'login']);
+$routes->post('register', [AuthController::class, 'register']);
+$routes->get('logout', [AuthController::class, 'logout']);
+$routes->get('dashboard', [DashboardController::class, 'index'], ['filter' => 'auth']);
+$routes->get('api/lists', [UserListController::class, 'all'], ['filter' => 'auth']);
+$routes->post('api/lists/create', [UserListController::class, 'create'], ['filter' => 'auth']);
+$routes->post('api/lists/(:num)/rename', [UserListController::class, 'rename/$1'], ['filter' => 'auth']);
+$routes->post('api/lists/(:num)/delete', [UserListController::class, 'delete/$1'], ['filter' => 'auth']);
+$routes->post('api/lists/toggle-item', [UserListController::class, 'toggleItem'], ['filter' => 'auth']);
+$routes->get('api/lists/item-memberships', [UserListController::class, 'itemMemberships'], ['filter' => 'auth']);
+$routes->post('api/likes/toggle', [LikeController::class, 'toggle'], ['filter' => 'auth']);
+$routes->get('api/watch-providers/(:segment)/(:num)', [WatchProvidersController::class, 'byRegion/$1/$2']);
 
 
 $routes->get('/', 'Home::index');

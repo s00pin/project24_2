@@ -1,18 +1,20 @@
-<h2><?= esc($title) ?></h2>
+<section class="glass-card p-4">
+    <?= session()->getFlashdata('error') ?>
+    <?= validation_list_errors() ?>
 
-<?= session()->getFlashdata('error') ?>
-<?= validation_list_errors() ?>
+    <form action="/news" method="post" class="d-grid gap-3">
+        <?= csrf_field() ?>
 
-<form action="/news" method="post">
-    <?= csrf_field() ?>
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input class="form-control" type="text" id="title" name="title" value="<?= set_value('title') ?>">
+        </div>
 
-    <label for="title">Title</label>
-    <input type="input" name="title" value="<?= set_value('title') ?>">
-    <br>
+        <div>
+            <label for="body" class="form-label">Text</label>
+            <textarea class="form-control" id="body" name="body" rows="5"><?= set_value('body') ?></textarea>
+        </div>
 
-    <label for="body">Text</label>
-    <textarea name="body" cols="45" rows="4"><?= set_value('body') ?></textarea>
-    <br>
-
-    <input type="submit" name="submit" value="Create news item">
-</form>
+        <button class="btn btn-accent" type="submit" name="submit">Create News Item</button>
+    </form>
+</section>

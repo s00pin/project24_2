@@ -1,23 +1,33 @@
-
-<div class="container">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php if (!empty($media) && is_array($media)): ?>
-            <?php foreach ($media as $media_item): ?>
-                <div class="col">
-                    <div class="card rounded-4 text-center h-100 w-100 shadow border-0">
-                        <a href="/media/<?= esc($media_item['id'], 'url') ?>">
-                            <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/<?= esc($media_item['poster_image']) ?>" alt="<?= esc($media_item['title']) ?>" class="card-img-top img-fluid rounded-4" style="object-fit: cover; height: 100%;">
-                        </a>
-                    </div>
-                </div>
-            <?php endforeach ?>
+<section class="library-hero glass-card mb-4">
+    <p class="library-kicker">Collection</p>
+    <h2>Movie Library</h2>
+    <p class="text-light-emphasis">Explore the full movie catalog with clean cards and quick access to details, likes, and lists.</p>
+    <div class="library-stats">
+        <span><?= esc((string) count($media ?? [])) ?> titles</span>
+        <span>Live suggestions enabled</span>
+        <span>TMDB fallback search</span>
     </div>
+</section>
+
+<div class="row row-cols-2 row-cols-md-4 g-3 media-grid">
+    <?php if (!empty($media) && is_array($media)): ?>
+        <?php foreach ($media as $media_item): ?>
+            <div class="col">
+                <a class="card h-100" href="<?= base_url('media/' . esc($media_item['id'], 'url')) ?>">
+                    <img src="https://image.tmdb.org/t/p/w300/<?= esc(ltrim((string) $media_item['poster_image'], '/')) ?>" alt="<?= esc($media_item['title']) ?>" class="w-100">
+                    <div class="card-meta">
+                        <p class="mb-0 small text-light"><?= esc($media_item['title']) ?></p>
+                        <span class="card-badge">Movie</span>
+                    </div>
+                </a>
+            </div>
+        <?php endforeach ?>
+    <?php else: ?>
+        <div class="col-12">
+            <div class="glass-card p-4">
+                <h3>No Movies</h3>
+                <p class="mb-0">Unable to find any movies right now.</p>
+            </div>
+        </div>
+    <?php endif ?>
 </div>
-
-<?php else: ?>
-
-    <h3>No Movies</h3>
-
-    <p>Unable to find any movies for you.</p>
-
-<?php endif ?>

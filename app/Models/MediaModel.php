@@ -17,5 +17,5 @@ class MediaModel extends Model
 
         return $this->where(['id' => $id])->first();
     }
-    protected $allowedFields = ['title', 'original_language', 'overview', 'release_date', 'genre', 'background_image', 'poster_image'];
+    protected $allowedFields = ['id', 'title', 'original_language', 'overview', 'release_date', 'genre', 'background_image', 'poster_image'];
 }

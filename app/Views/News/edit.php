@@ -1,15 +1,19 @@
-<h2><?= esc($title) ?></h2>
+<section class="glass-card p-4">
+    <?= \Config\Services::validation()->listErrors() ?>
 
-<?= \Config\Services::validation()->listErrors() ?>
+    <form action="/news/update/<?= esc($news['id']) ?>" method="post" class="d-grid gap-3">
+        <?= csrf_field() ?>
 
-<form action="/news/update/<?= esc($news['id']) ?>" method="post">
-    <?= csrf_field() ?>
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input class="form-control" type="text" id="title" name="title" value="<?= esc($news['title']) ?>">
+        </div>
 
-    <label for="title">Title</label>
-    <input type="input" name="title" value="<?= esc($news['title']) ?>" /><br />
+        <div>
+            <label for="body" class="form-label">Body</label>
+            <textarea class="form-control" id="body" name="body" rows="5"><?= esc($news['body']) ?></textarea>
+        </div>
 
-    <label for="body">Body</label>
-    <textarea name="body"><?= esc($news['body']) ?></textarea><br />
-
-    <input type="submit" name="submit" value="Update news item" />
-</form>
+        <button class="btn btn-accent" type="submit" name="submit">Update News Item</button>
+    </form>
+</section>

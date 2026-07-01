@@ -15,7 +15,7 @@ class News extends BaseController
             'title' => 'News archive',
         ];
         return view('templates/header', $data)
-            . view('news/index')
+            . view('News/index', $data)
             . view('templates/footer');
     }
 
@@ -28,7 +28,7 @@ class News extends BaseController
         }
         $data['title'] = $data['news']['title'];
         return view('templates/header', $data)
-            . view('news/view')
+            . view('News/view', $data)
             . view('templates/footer');
     }
 
@@ -36,7 +36,7 @@ class News extends BaseController
     {
         helper('form');
         return view('templates/header', ['title' => 'Create a news item'])
-            . view('news/create')
+            . view('News/create')
             . view('templates/footer');
     }
 
@@ -58,7 +58,7 @@ class News extends BaseController
             'body'  => $post['body'],
         ]);
         return view('templates/header', ['title' => 'Create a news item'])
-            . view('news/success')
+            . view('News/success')
             . view('templates/footer');
     }
 
@@ -72,7 +72,7 @@ class News extends BaseController
         }
         $data['title'] = 'Edit news item';
         return view('templates/header', $data)
-            . view('news/edit')
+            . view('News/edit', $data)
             . view('templates/footer');
     }
 
@@ -94,7 +94,7 @@ class News extends BaseController
             'body'  => $post['body'],
         ]);
         return view('templates/header', ['title' => 'Edit news item'])
-            . view('news/success')
+            . view('News/success')
             . view('templates/footer');
     }
 

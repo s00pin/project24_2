@@ -26,11 +26,11 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
+        'hostname'     => '',
         'username'     => '',
         'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'database'     => WRITEPATH . 'database/project24.sqlite',
+        'DBDriver'     => 'SQLite3',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
@@ -41,7 +41,9 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 0,
+        'foreignKeys'  => true,
+        'busyTimeout'  => 1000,
         'numberNative' => false,
         'dateFormat'   => [
             'date'     => 'Y-m-d',
