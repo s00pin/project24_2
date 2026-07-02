@@ -1,6 +1,8 @@
 <?php
 $isLoggedIn = (bool) session()->get('logged_in');
 $username = (string) session()->get('username');
+$cssAssetPath = FCPATH . 'assets/css/main.css';
+$cssVersion = is_file($cssAssetPath) ? (string) filemtime($cssAssetPath) : (string) time();
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,7 +16,7 @@ $username = (string) session()->get('username');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= base_url('assets/css/main.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/main.css') . '?v=' . $cssVersion; ?>">
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/image/logo.ico'); ?>">
 </head>
 <body>
