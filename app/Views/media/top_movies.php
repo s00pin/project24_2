@@ -16,7 +16,12 @@
                 <a class="card h-100" href="<?= base_url('media/' . esc($media_item['id'], 'url')) ?>">
                     <img src="https://image.tmdb.org/t/p/w300/<?= esc(ltrim((string) $media_item['poster_image'], '/')) ?>" alt="<?= esc($media_item['title']) ?>" class="w-100">
                     <div class="card-meta">
-                        <p class="mb-0 small text-light"><?= esc($media_item['title']) ?></p>
+                        <div class="card-meta-main">
+                            <p class="mb-0 card-title-text"><?= esc($media_item['title']) ?></p>
+                            <p class="mb-0 card-subtext">
+                                Movie<?= !empty($media_item['release_date']) ? ' | ' . esc(substr((string) $media_item['release_date'], 0, 4)) : '' ?>
+                            </p>
+                        </div>
                         <span class="card-badge">Movie</span>
                     </div>
                 </a>

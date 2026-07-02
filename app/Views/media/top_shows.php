@@ -16,7 +16,12 @@
                 <a class="card h-100" href="<?= base_url('show/' . esc($show_item['id'], 'url')) ?>">
                     <img src="https://image.tmdb.org/t/p/w300/<?= esc(ltrim((string) $show_item['poster'], '/')) ?>" alt="<?= esc($show_item['title']) ?>" class="w-100">
                     <div class="card-meta">
-                        <p class="mb-0 small text-light"><?= esc($show_item['title']) ?></p>
+                        <div class="card-meta-main">
+                            <p class="mb-0 card-title-text"><?= esc($show_item['title']) ?></p>
+                            <p class="mb-0 card-subtext">
+                                Show<?= !empty($show_item['begin_date']) ? ' | ' . esc(substr((string) $show_item['begin_date'], 0, 4)) : '' ?>
+                            </p>
+                        </div>
                         <span class="card-badge">Show</span>
                     </div>
                 </a>

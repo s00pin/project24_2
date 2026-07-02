@@ -48,7 +48,7 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                                         data-media-type="show"
                                         data-media-id="<?= esc((string) $show['id']) ?>"
                                     >
-                                        <span><?= esc($list['name']) ?></span>
+                                        <span class="list-option-title"><?= esc($list['name']) ?></span>
                                         <span class="list-option-mark"><?= in_array($lid, $activeListIds, true) ? 'Added' : 'Add' ?></span>
                                     </button>
                                 <?php endforeach; ?>

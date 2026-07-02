@@ -397,10 +397,35 @@ h3 {
 
 .card-meta {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    gap: 0.5rem;
+    gap: 0.65rem;
     padding-top: 0.55rem;
+}
+
+.card-meta-main {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.card-title-text {
+    color: #dbe8f7;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.79rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card-subtext {
+    margin-top: 0.3rem;
+    color: #93a7be;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.66rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .card-badge {
@@ -410,6 +435,8 @@ h3 {
     font-size: 0.66rem;
     color: var(--accent-cool);
     font-family: "IBM Plex Mono", monospace;
+    white-space: nowrap;
+    flex: 0 0 auto;
 }
 
 .media-grid .small {
@@ -419,7 +446,7 @@ h3 {
 }
 
 .detail-shell {
-    overflow: hidden;
+    overflow: visible;
     background: linear-gradient(150deg, rgba(6, 12, 18, 0.93), rgba(8, 16, 24, 0.82));
 }
 
@@ -428,6 +455,8 @@ h3 {
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: calc(var(--radius-xl) - 1px) calc(var(--radius-xl) - 1px) 0 0;
+    overflow: hidden;
 }
 
 .detail-backdrop::after {
@@ -608,7 +637,9 @@ h3 {
     position: absolute;
     top: calc(100% + 0.5rem);
     left: 0;
-    width: min(330px, 88vw);
+    width: min(420px, 92vw);
+    max-height: min(58vh, 430px);
+    overflow: auto;
     padding: 0.5rem;
     border-radius: 12px;
     border: 1px solid var(--line);
@@ -625,7 +656,7 @@ h3 {
 .list-option {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 0.5rem;
     border: 1px solid var(--line);
@@ -635,6 +666,7 @@ h3 {
     padding: 0.45rem 0.6rem;
     margin-bottom: 0.45rem;
     font-size: 0.86rem;
+    text-align: left;
 }
 
 .list-option:last-of-type {
@@ -652,6 +684,16 @@ h3 {
     letter-spacing: 0.05em;
     font-family: "IBM Plex Mono", monospace;
     color: var(--accent);
+    white-space: nowrap;
+    flex: 0 0 auto;
+    margin-top: 0.08rem;
+}
+
+.list-option-title {
+    min-width: 0;
+    flex: 1 1 auto;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
 }
 
 .list-manage-link {
