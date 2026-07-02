@@ -35,6 +35,13 @@ $(function () {
             return;
         }
 
+        const navLinks = siteNav.querySelectorAll('a');
+
+        function closeMenu() {
+            siteNav.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
         menuToggle.addEventListener('click', () => {
             const open = siteNav.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
@@ -49,8 +56,19 @@ $(function () {
                 return;
             }
 
-            siteNav.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
+            closeMenu();
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                closeMenu();
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 1080) {
+                closeMenu();
+            }
         });
     }
 
