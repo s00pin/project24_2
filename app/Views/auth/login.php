@@ -7,7 +7,7 @@
 
     <div class="auth-panel <?= $mode === 'login' ? 'active' : '' ?>" data-auth-panel="login">
         <h2 class="mb-2">Welcome back</h2>
-        <p class="text-light-emphasis">Sign in to manage lists, likes, and recommendations.</p>
+        <p class="text-light-emphasis">Sign in to manage your lists and liked titles.</p>
 
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger"><?= esc(session()->getFlashdata('error')) ?></div>
@@ -32,7 +32,7 @@
 
     <div class="auth-panel <?= $mode === 'register' ? 'active' : '' ?>" data-auth-panel="register">
         <h2 class="mb-2">Create account</h2>
-        <p class="text-light-emphasis">Register to save lists, likes, and tailored suggestions.</p>
+        <p class="text-light-emphasis">Register to save your lists and likes.</p>
 
         <?php if (session()->getFlashdata('register_error')): ?>
             <div class="alert alert-danger"><?= esc(session()->getFlashdata('register_error')) ?></div>

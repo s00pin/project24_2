@@ -12,7 +12,7 @@ $username = (string) session()->get('username');
     <title><?= esc($title ?? 'Media Hub') ?> | Media Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/main.css'); ?>">
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/image/logo.ico'); ?>">
@@ -26,7 +26,7 @@ $username = (string) session()->get('username');
                 <a class="navbar-brand brand-lockup" href="<?= base_url('home'); ?>">
                     <img src="<?= base_url('assets/image/logo.png'); ?>" alt="Media Hub logo" class="brand-logo">
                     <span class="brand-text">Media Hub</span>
-                    <span class="brand-tag">Discover | Track | Watch</span>
+                    <span class="brand-tag">Movies + TV</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@ $username = (string) session()->get('username');
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <form class="search-wrap mx-lg-auto mt-3 mt-lg-0" action="<?= base_url('search') ?>" method="get">
-                        <input id="search-input" class="form-control search-input" type="search" name="query" placeholder="Search title, genre, vibe..." autocomplete="off">
+                        <input id="search-input" class="form-control search-input" type="search" name="query" placeholder="Search movies or shows" autocomplete="off">
                         <button class="btn btn-accent ms-2" type="submit">Search</button>
                         <ul id="suggestions" class="suggestion-box"></ul>
                     </form>

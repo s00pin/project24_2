@@ -1,7 +1,7 @@
 <section class="library-hero glass-card mb-4">
-    <p class="library-kicker">Collection</p>
+    <p class="library-kicker">Catalog</p>
     <h2>Show Library</h2>
-    <p class="text-light-emphasis">Browse TV shows with richer detail views and personalized list actions.</p>
+    <p class="text-light-emphasis">Browse TV shows and manage likes and lists from each detail page.</p>
     <div class="library-stats">
         <span><?= esc((string) count($show ?? [])) ?> titles</span>
         <span>Region watch providers</span>

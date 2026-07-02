@@ -58,7 +58,7 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                 <?php else: ?>
                     <div class="auth-gate">
                         <p class="mb-2">Sign in to like this title and add it to your custom lists.</p>
-                        <a href="<?= base_url('login') ?>" class="btn btn-sm btn-outline-light">Login to unlock</a>
+                        <a href="<?= base_url('login') ?>" class="btn btn-sm btn-outline-light">Login</a>
                     </div>
                 <?php endif; ?>
             </div>

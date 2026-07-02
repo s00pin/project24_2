@@ -1,6 +1,6 @@
 <section class="hero mb-4">
-    <h2>Discover movies and shows worth your time.</h2>
-    <p class="lead mb-4">Browse top picks instantly. You can explore everything before login, then sign in to unlock personal actions like Favorites and My List.</p>
+    <h2>Browse movies and shows by title.</h2>
+    <p class="lead mb-4">Explore the catalog first, then sign in to save likes and custom lists.</p>
     <div class="d-flex flex-wrap gap-2">
         <a href="<?= base_url('media'); ?>" class="btn btn-accent">Explore Movies</a>
         <a href="<?= base_url('show'); ?>" class="btn btn-outline-light">Browse Shows</a>

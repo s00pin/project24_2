@@ -1,11 +1,11 @@
 <section class="library-hero glass-card mb-4">
-    <p class="library-kicker">Collection</p>
+    <p class="library-kicker">Catalog</p>
     <h2>Movie Library</h2>
-    <p class="text-light-emphasis">Explore the full movie catalog with clean cards and quick access to details, likes, and lists.</p>
+    <p class="text-light-emphasis">Browse the movie catalog and open details, likes, and lists in one click.</p>
     <div class="library-stats">
         <span><?= esc((string) count($media ?? [])) ?> titles</span>
-        <span>Live suggestions enabled</span>
-        <span>TMDB fallback search</span>
+        <span>Search suggestions</span>
+        <span>TMDB data source</span>
     </div>
 </section>
 

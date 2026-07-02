@@ -1,6 +1,6 @@
 <section class="glass-card p-4">
     <h2 class="mb-2">Hello, <?= esc((string) session()->get('username')) ?></h2>
-    <p class="text-light-emphasis mb-3">Create as many lists as you want, rename them, and curate your own ranking board.</p>
+    <p class="text-light-emphasis mb-3">Create lists, rename them, and keep your watch history organized.</p>
     <div class="d-flex flex-wrap gap-2">
         <a href="<?= base_url('media') ?>" class="btn btn-accent">Go to Movies</a>
         <a href="<?= base_url('show') ?>" class="btn btn-outline-light">Go to Shows</a>
@@ -11,7 +11,7 @@
 <section class="glass-card p-4 mt-3">
     <h3 class="mb-3">Create New List</h3>
     <div class="d-flex flex-wrap gap-2 align-items-center">
-        <input type="text" id="new-list-name" class="form-control" placeholder="e.g. Weekend Binge, Sci-Fi Gems" style="max-width: 340px;">
+        <input type="text" id="new-list-name" class="form-control" placeholder="e.g. Weekend Picks, Sci-Fi Favorites" style="max-width: 340px;">
         <button type="button" class="btn list-action-btn" id="create-list-btn">Create List</button>
     </div>
     <p class="action-feedback mt-2 mb-0" id="list-manage-feedback"></p>
