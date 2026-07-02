@@ -7,10 +7,10 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
 
     <div class="detail-content js-title-detail" data-media-type="show" data-media-id="<?= esc((string) $show['id']) ?>">
         <div class="detail-header-row">
-            <img src="https://image.tmdb.org/t/p/w500/<?= esc(ltrim((string) ($show['poster'] ?? ''), '/')) ?>" alt="<?= esc($show['title']) ?> poster" class="detail-poster">
+            <img src="https://image.tmdb.org/t/p/w500/<?= esc(ltrim((string) ($show['poster'] ?? ''), '/')) ?>" alt="<?= esc($show['title']) ?> poster" class="detail-poster" onerror="this.onerror=null;this.src='<?= esc(base_url('assets/image/logo.png')) ?>';">
 
             <div class="detail-main">
-                <p class="detail-type">TV Show</p>
+                <p class="detail-type">Show</p>
                 <h2><?= esc($show['title']) ?></h2>
                 <p class="text-light-emphasis detail-overview"><?= esc($show['overview']) ?></p>
 
@@ -52,14 +52,14 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                                         <span class="list-option-mark"><?= in_array($lid, $activeListIds, true) ? 'Added' : 'Add' ?></span>
                                     </button>
                                 <?php endforeach; ?>
-                                <a href="<?= base_url('dashboard') ?>" class="list-manage-link">Manage all lists</a>
+                                <a href="<?= base_url('dashboard') ?>" class="list-manage-link">Manage lists</a>
                             </div>
                         </div>
                     </div>
                     <p class="action-feedback mt-2 mb-0" id="list-feedback"></p>
                 <?php else: ?>
                     <div class="auth-gate">
-                        <p class="mb-2">Sign in to like this title and add it to your custom lists.</p>
+                        <p class="mb-2">Sign in to save this title to likes or lists.</p>
                         <a href="<?= base_url('login') ?>" class="btn btn-sm btn-outline-light">Login</a>
                     </div>
                 <?php endif; ?>
@@ -68,7 +68,7 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
 
         <section class="providers-wrap mt-3">
             <h3 class="providers-title">Where to watch in your region</h3>
-            <div class="providers-status" id="providers-status">Waiting for consent to use cookies and location.</div>
+            <div class="providers-status" id="providers-status">Choose cookie settings to load provider availability.</div>
             <div class="providers-grid" id="providers-grid"></div>
         </section>
     </div>

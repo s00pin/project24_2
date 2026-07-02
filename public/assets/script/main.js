@@ -59,14 +59,38 @@ $(function () {
             return;
         }
 
+        let pendingXhr = null;
+        let debounceTimer = null;
+
         function hideSuggestions() {
             $suggestions.empty().hide();
+        }
+
+        function renderLoading() {
+            $suggestions.html('<li class="suggestion-item">Searching...</li>').show();
         }
 
         $searchInput.on('keyup', function () {
             const query = String($(this).val() || '').trim();
 
-            $.ajax({
+            if (debounceTimer) {
+                clearTimeout(debounceTimer);
+            }
+
+            if (pendingXhr) {
+                pendingXhr.abort();
+                pendingXhr = null;
+            }
+
+            if (query.length === 0) {
+                hideSuggestions();
+                return;
+            }
+
+            debounceTimer = window.setTimeout(() => {
+                renderLoading();
+
+                pendingXhr = $.ajax({
                 url: `${window.APP_BASE_URL}/search/searchSuggestions`,
                 method: 'GET',
                 data: { query },
@@ -96,17 +120,27 @@ $(function () {
                 },
                 error: hideSuggestions,
             });
+            }, 160);
         });
 
         $suggestions.on('click', '.suggestion-item', function () {
             const id = $(this).data('id');
             const type = $(this).data('type');
+            if (!id) {
+                return;
+            }
             const target = type === 'show' ? `${window.APP_BASE_URL}/show/${id}` : `${window.APP_BASE_URL}/media/${id}`;
             window.location.href = target;
         });
 
         $(document).on('click', function (event) {
             if (!$(event.target).closest('.search-wrap').length) {
+                hideSuggestions();
+            }
+        });
+
+        $searchInput.on('keydown', function (event) {
+            if (event.key === 'Escape') {
                 hideSuggestions();
             }
         });
@@ -426,7 +460,7 @@ $(function () {
                     }
 
                     if (feedback) feedback.textContent = 'List created. Refreshing...';
-                    setTimeout(() => window.location.reload(), 450);
+                    setTimeout(() => window.location.reload(), 350);
                 } catch (error) {
                     if (feedback) feedback.textContent = error.message || 'Could not create list.';
                 } finally {
@@ -463,7 +497,7 @@ $(function () {
                     }
 
                     if (feedback) feedback.textContent = 'List renamed. Refreshing...';
-                    setTimeout(() => window.location.reload(), 450);
+                    setTimeout(() => window.location.reload(), 350);
                 } catch (error) {
                     if (feedback) feedback.textContent = error.message || 'Could not rename list.';
                 } finally {
@@ -496,7 +530,7 @@ $(function () {
                     }
 
                     if (feedback) feedback.textContent = 'List deleted. Refreshing...';
-                    setTimeout(() => window.location.reload(), 450);
+                    setTimeout(() => window.location.reload(), 350);
                 } catch (error) {
                     if (feedback) feedback.textContent = error.message || 'Could not delete list.';
                 } finally {

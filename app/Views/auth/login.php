@@ -1,12 +1,18 @@
 <?php $mode = old('auth_mode') ?: ($authMode ?? 'login'); ?>
+
 <section class="auth-page glass-card p-4">
+    <div class="section-heading mb-3">
+        <h3>Account Access</h3>
+        <p>Login for likes and lists, or register a new account</p>
+    </div>
+
     <div class="auth-switch mb-3" role="tablist" aria-label="Authentication mode">
         <button type="button" class="auth-tab-btn <?= $mode === 'login' ? 'active' : '' ?>" data-auth-tab="login">Login</button>
         <button type="button" class="auth-tab-btn <?= $mode === 'register' ? 'active' : '' ?>" data-auth-tab="register">Register</button>
     </div>
 
     <div class="auth-panel <?= $mode === 'login' ? 'active' : '' ?>" data-auth-panel="login">
-        <h2 class="mb-2">Welcome back</h2>
+        <h2 class="mb-2">Welcome Back</h2>
         <p class="text-light-emphasis">Sign in to manage your lists and liked titles.</p>
 
         <?php if (session()->getFlashdata('error')): ?>
@@ -27,12 +33,12 @@
             <button type="submit" class="btn btn-accent">Login</button>
         </form>
 
-        <p class="small mt-3 mb-0 text-light-emphasis">Demo user: <code>demo</code> / <code>Demo@123</code></p>
+        <p class="auth-note mt-3 mb-0">Demo user: <code>demo</code> / <code>Demo@123</code></p>
     </div>
 
     <div class="auth-panel <?= $mode === 'register' ? 'active' : '' ?>" data-auth-panel="register">
-        <h2 class="mb-2">Create account</h2>
-        <p class="text-light-emphasis">Register to save your lists and likes.</p>
+        <h2 class="mb-2">Create Account</h2>
+        <p class="text-light-emphasis">Register to save lists and likes.</p>
 
         <?php if (session()->getFlashdata('register_error')): ?>
             <div class="alert alert-danger"><?= esc(session()->getFlashdata('register_error')) ?></div>

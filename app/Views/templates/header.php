@@ -3,6 +3,8 @@ $isLoggedIn = (bool) session()->get('logged_in');
 $username = (string) session()->get('username');
 $cssAssetPath = FCPATH . 'assets/css/main.css';
 $cssVersion = is_file($cssAssetPath) ? (string) filemtime($cssAssetPath) : (string) time();
+$path = trim((string) service('uri')->getPath(), '/');
+$navPath = $path === '' ? 'home' : $path;
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,7 +16,7 @@ $cssVersion = is_file($cssAssetPath) ? (string) filemtime($cssAssetPath) : (stri
     <title><?= esc($title ?? 'Media Hub') ?> | Media Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= base_url('assets/css/main.css') . '?v=' . $cssVersion; ?>">
     <link rel="icon" type="image/x-icon" href="<?= base_url('assets/image/logo.ico'); ?>">
@@ -28,7 +30,7 @@ $cssVersion = is_file($cssAssetPath) ? (string) filemtime($cssAssetPath) : (stri
                 <a class="navbar-brand brand-lockup" href="<?= base_url('home'); ?>">
                     <img src="<?= base_url('assets/image/logo.png'); ?>" alt="Media Hub logo" class="brand-logo">
                     <span class="brand-text">Media Hub</span>
-                    <span class="brand-tag">Movies + TV</span>
+                    <span class="brand-tag">Live Catalog</span>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,11 +45,11 @@ $cssVersion = is_file($cssAssetPath) ? (string) filemtime($cssAssetPath) : (stri
                     </form>
 
                     <ul class="navbar-nav ms-auto mt-3 mt-lg-0 align-items-lg-center nav-cluster">
-                        <li class="nav-item"><a class="nav-link top-nav" href="<?= base_url('home'); ?>">Home</a></li>
-                        <li class="nav-item"><a class="nav-link top-nav" href="<?= base_url('media'); ?>">Movies</a></li>
-                        <li class="nav-item"><a class="nav-link top-nav" href="<?= base_url('show'); ?>">Shows</a></li>
+                        <li class="nav-item"><a class="nav-link top-nav <?= in_array($navPath, ['', 'home'], true) ? 'active' : '' ?>" href="<?= base_url('home'); ?>">Home</a></li>
+                        <li class="nav-item"><a class="nav-link top-nav <?= str_starts_with($navPath, 'media') ? 'active' : '' ?>" href="<?= base_url('media'); ?>">Movies</a></li>
+                        <li class="nav-item"><a class="nav-link top-nav <?= str_starts_with($navPath, 'show') ? 'active' : '' ?>" href="<?= base_url('show'); ?>">Shows</a></li>
                         <?php if ($isLoggedIn): ?>
-                            <li class="nav-item"><a class="nav-link top-nav" href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
+                            <li class="nav-item"><a class="nav-link top-nav <?= str_starts_with($navPath, 'dashboard') ? 'active' : '' ?>" href="<?= base_url('dashboard'); ?>">Dashboard</a></li>
                             <li class="nav-item"><span class="nav-link user-pill"><?= esc($username) ?></span></li>
                             <li class="nav-item"><a class="btn btn-outline-light btn-sm ms-lg-2" href="<?= base_url('logout'); ?>">Logout</a></li>
                         <?php else: ?>

@@ -31,7 +31,7 @@ class Search extends BaseController
         }
 
         return view('templates/header', $data)
-            . view('media/search_results', ['media' => $media, 'shows' => $shows])
+            . view('media/search_results', ['media' => $media, 'shows' => $shows, 'query' => $query])
             . view('templates/footer');
     }
 

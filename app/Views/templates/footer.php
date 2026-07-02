@@ -7,11 +7,12 @@ $jsVersion = is_file($jsAssetPath) ? (string) filemtime($jsAssetPath) : (string)
 
     <footer class="site-footer">
         <div class="container footer-inner">
-            <p class="mb-0">Media Hub - Curated movie and TV discovery</p>
+            <p class="mb-0">Media Hub - Movies and TV catalog with likes, lists, and watch providers.</p>
             <nav class="footer-nav">
                 <a href="<?= base_url('home'); ?>">Home</a>
                 <a href="<?= base_url('media'); ?>">Movies</a>
                 <a href="<?= base_url('show'); ?>">Shows</a>
+                <a href="<?= base_url('search'); ?>">Search</a>
                 <a href="<?= base_url('dashboard'); ?>">Dashboard</a>
             </nav>
         </div>
