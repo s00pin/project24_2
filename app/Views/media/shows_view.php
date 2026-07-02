@@ -24,9 +24,9 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                 </div>
 
                 <?php if ($isLoggedIn): ?>
-                    <div class="detail-actions mt-3">
+                    <div class="detail-actions">
                         <button
-                            class="btn list-action-btn like-btn <?= !empty($isLiked) ? 'is-active' : '' ?>"
+                            class="list-action-btn like-btn <?= !empty($isLiked) ? 'is-active' : '' ?>"
                             type="button"
                             data-like-toggle="1"
                             data-media-type="show"
@@ -36,7 +36,7 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                         </button>
 
                         <div class="list-dropdown" data-list-dropdown="1">
-                            <button class="btn list-action-btn alt list-dropdown-toggle" type="button">Add to Lists</button>
+                            <button class="list-action-btn alt list-dropdown-toggle" type="button">Add to Lists</button>
                             <div class="list-dropdown-menu">
                                 <?php foreach (($userLists ?? []) as $list): ?>
                                     <?php $lid = (int) $list['id']; ?>
@@ -56,17 +56,17 @@ $activeListIds = array_map('intval', $activeListIds ?? []);
                             </div>
                         </div>
                     </div>
-                    <p class="action-feedback mt-2 mb-0" id="list-feedback"></p>
+                    <p class="action-feedback" id="list-feedback"></p>
                 <?php else: ?>
                     <div class="auth-gate">
-                        <p class="mb-2">Sign in to save this title to likes or lists.</p>
-                        <a href="<?= base_url('login') ?>" class="btn btn-sm btn-outline-light">Login</a>
+                        <p>Sign in to save this title to likes or lists.</p>
+                        <a href="<?= base_url('login') ?>" class="btn btn-outline-light btn-sm">Login</a>
                     </div>
                 <?php endif; ?>
             </div>
         </div>
 
-        <section class="providers-wrap mt-3">
+        <section class="providers-wrap">
             <h3 class="providers-title">Where to watch in your region</h3>
             <div class="providers-status" id="providers-status">Choose cookie settings to load provider availability.</div>
             <div class="providers-grid" id="providers-grid"></div>

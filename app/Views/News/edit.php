@@ -1,7 +1,12 @@
-<section class="glass-card p-4">
+<section class="panel" style="max-width:780px;">
+    <div class="section-head">
+        <h3>Edit News</h3>
+        <p>Update title or text and save changes.</p>
+    </div>
+
     <?= \Config\Services::validation()->listErrors() ?>
 
-    <form action="/news/update/<?= esc($news['id']) ?>" method="post" class="d-grid gap-3">
+    <form action="/news/update/<?= esc($news['id']) ?>" method="post" style="display:grid;gap:0.9rem;">
         <?= csrf_field() ?>
 
         <div>
@@ -11,9 +16,9 @@
 
         <div>
             <label for="body" class="form-label">Body</label>
-            <textarea class="form-control" id="body" name="body" rows="5"><?= esc($news['body']) ?></textarea>
+            <textarea class="form-control" id="body" name="body" rows="6"><?= esc($news['body']) ?></textarea>
         </div>
 
-        <button class="btn btn-accent" type="submit" name="submit">Update News Item</button>
+        <button class="btn btn-accent" type="submit" name="submit" style="justify-self:start;">Update News Item</button>
     </form>
 </section>

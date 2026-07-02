@@ -1,8 +1,8 @@
-<section class="glass-card p-4">
-    <div class="section-heading">
-        <h3>Top Movies</h3>
-        <p>Legacy page endpoint</p>
+<section class="panel">
+    <div class="section-head">
+        <h3>Top Movies Route</h3>
+        <p>Legacy endpoint</p>
     </div>
-    <p class="text-light-emphasis mb-3">Open the movie library for current catalog data and movie detail pages.</p>
+    <p class="text-light-emphasis">Use the movie library route for current data and complete detail pages.</p>
     <a class="btn btn-accent" href="<?= base_url('media') ?>">Open Movie Library</a>
 </section>

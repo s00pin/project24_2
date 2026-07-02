@@ -1,25 +1,25 @@
 <?php $mode = old('auth_mode') ?: ($authMode ?? 'login'); ?>
 
-<section class="auth-page glass-card p-4">
-    <div class="section-heading mb-3">
+<section class="auth-page">
+    <div class="section-head">
         <h3>Account Access</h3>
-        <p>Login for likes and lists, or register a new account</p>
+        <p>Login to manage likes and lists, or create a new account.</p>
     </div>
 
-    <div class="auth-switch mb-3" role="tablist" aria-label="Authentication mode">
+    <div class="auth-switch" role="tablist" aria-label="Authentication mode">
         <button type="button" class="auth-tab-btn <?= $mode === 'login' ? 'active' : '' ?>" data-auth-tab="login">Login</button>
         <button type="button" class="auth-tab-btn <?= $mode === 'register' ? 'active' : '' ?>" data-auth-tab="register">Register</button>
     </div>
 
-    <div class="auth-panel <?= $mode === 'login' ? 'active' : '' ?>" data-auth-panel="login">
-        <h2 class="mb-2">Welcome Back</h2>
-        <p class="text-light-emphasis">Sign in to manage your lists and liked titles.</p>
+    <div class="auth-panel <?= $mode === 'login' ? 'active' : '' ?>" data-auth-panel="login" style="margin-top:1rem;">
+        <h2 style="margin:0;font-family:'Instrument Serif',serif;font-size:2rem;font-weight:400;color:var(--heading);">Welcome Back</h2>
+        <p class="text-light-emphasis" style="margin-top:0.45rem;">Sign in to continue managing your watch lists and likes.</p>
 
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger"><?= esc(session()->getFlashdata('error')) ?></div>
         <?php endif; ?>
 
-        <form action="<?= base_url('login') ?>" method="post" class="d-grid gap-3">
+        <form action="<?= base_url('login') ?>" method="post" style="display:grid;gap:0.85rem;">
             <?= csrf_field() ?>
             <input type="hidden" name="auth_mode" value="login">
             <div>
@@ -30,21 +30,21 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" name="password" id="password" class="form-control" required>
             </div>
-            <button type="submit" class="btn btn-accent">Login</button>
+            <button type="submit" class="btn btn-accent" style="justify-self:start;">Login</button>
         </form>
 
-        <p class="auth-note mt-3 mb-0">Demo user: <code>demo</code> / <code>Demo@123</code></p>
+        <p class="auth-note" style="margin-top:0.9rem;">Demo user: <code>demo</code> / <code>Demo@123</code></p>
     </div>
 
-    <div class="auth-panel <?= $mode === 'register' ? 'active' : '' ?>" data-auth-panel="register">
-        <h2 class="mb-2">Create Account</h2>
-        <p class="text-light-emphasis">Register to save lists and likes.</p>
+    <div class="auth-panel <?= $mode === 'register' ? 'active' : '' ?>" data-auth-panel="register" style="margin-top:1rem;">
+        <h2 style="margin:0;font-family:'Instrument Serif',serif;font-size:2rem;font-weight:400;color:var(--heading);">Create Account</h2>
+        <p class="text-light-emphasis" style="margin-top:0.45rem;">Register to save titles to your own likes and lists.</p>
 
         <?php if (session()->getFlashdata('register_error')): ?>
             <div class="alert alert-danger"><?= esc(session()->getFlashdata('register_error')) ?></div>
         <?php endif; ?>
 
-        <form action="<?= base_url('register') ?>" method="post" class="d-grid gap-3">
+        <form action="<?= base_url('register') ?>" method="post" style="display:grid;gap:0.85rem;">
             <?= csrf_field() ?>
             <input type="hidden" name="auth_mode" value="register">
             <div>
@@ -63,7 +63,7 @@
                 <label for="reg_password_confirm" class="form-label">Confirm password</label>
                 <input type="password" name="reg_password_confirm" id="reg_password_confirm" class="form-control" minlength="8" required>
             </div>
-            <button type="submit" class="btn btn-accent">Create account</button>
+            <button type="submit" class="btn btn-accent" style="justify-self:start;">Create account</button>
         </form>
     </div>
 </section>

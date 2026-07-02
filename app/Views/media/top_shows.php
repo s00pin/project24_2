@@ -1,40 +1,38 @@
 <?php $showCount = count($show ?? []); ?>
 
-<section class="library-hero glass-card">
+<section class="library-hero">
     <p class="library-kicker">Shows</p>
     <h2>Show Library</h2>
-    <p class="text-light-emphasis mb-3">Browse all show entries, open detail pages, and organize titles in personal lists.</p>
+    <p class="text-light-emphasis">Browse the complete show catalog and open details to manage likes, lists, and providers.</p>
     <div class="library-stats">
-        <span><?= esc((string) $showCount) ?> titles</span>
-        <span>Region-based providers</span>
-        <span>List and like actions</span>
+        <span><?= esc((string) $showCount) ?> total titles</span>
+        <span>Personal lists supported</span>
+        <span>Region provider lookup</span>
     </div>
 </section>
 
-<div class="row row-cols-2 row-cols-md-4 g-3 media-grid">
-    <?php if (!empty($show) && is_array($show)): ?>
-        <?php foreach ($show as $show_item): ?>
-            <div class="col">
-                <a class="card h-100" href="<?= base_url('show/' . esc($show_item['id'], 'url')) ?>">
-                    <img src="https://image.tmdb.org/t/p/w300/<?= esc(ltrim((string) $show_item['poster'], '/')) ?>" alt="<?= esc($show_item['title']) ?>" class="w-100" onerror="this.onerror=null;this.src='<?= esc(base_url('assets/image/logo.png')) ?>';">
+<?php if (!empty($show) && is_array($show)): ?>
+    <section class="panel">
+        <div class="catalog-grid">
+            <?php foreach ($show as $show_item): ?>
+                <a class="media-card" href="<?= base_url('show/' . esc($show_item['id'], 'url')) ?>">
+                    <img src="https://image.tmdb.org/t/p/w300/<?= esc(ltrim((string) $show_item['poster'], '/')) ?>" alt="<?= esc($show_item['title']) ?>" onerror="this.onerror=null;this.src='<?= esc(base_url('assets/image/logo.png')) ?>';">
                     <div class="card-meta">
                         <div class="card-meta-main">
-                            <p class="mb-0 card-title-text"><?= esc($show_item['title']) ?></p>
-                            <p class="mb-0 card-subtext">
+                            <p class="card-title-text"><?= esc($show_item['title']) ?></p>
+                            <p class="card-subtext">
                                 Show<?= !empty($show_item['begin_date']) ? ' | ' . esc(substr((string) $show_item['begin_date'], 0, 4)) : '' ?>
                             </p>
                         </div>
                         <span class="card-badge">Show</span>
                     </div>
                 </a>
-            </div>
-        <?php endforeach ?>
-    <?php else: ?>
-        <div class="col-12">
-            <div class="glass-card p-4">
-                <h3>No Shows Found</h3>
-                <p class="mb-0">No show entries are available right now.</p>
-            </div>
+            <?php endforeach ?>
         </div>
-    <?php endif ?>
-</div>
+    </section>
+<?php else: ?>
+    <section class="empty-card">
+        <h3>No Shows Found</h3>
+        <p>Show entries are not available right now.</p>
+    </section>
+<?php endif ?>

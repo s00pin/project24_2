@@ -1,8 +1,13 @@
-<section class="glass-card p-4">
+<section class="panel" style="max-width:780px;">
+    <div class="section-head">
+        <h3>Create News</h3>
+        <p>Add a new entry for the news section.</p>
+    </div>
+
     <?= session()->getFlashdata('error') ?>
     <?= validation_list_errors() ?>
 
-    <form action="/news" method="post" class="d-grid gap-3">
+    <form action="/news" method="post" style="display:grid;gap:0.9rem;">
         <?= csrf_field() ?>
 
         <div>
@@ -12,9 +17,9 @@
 
         <div>
             <label for="body" class="form-label">Text</label>
-            <textarea class="form-control" id="body" name="body" rows="5"><?= set_value('body') ?></textarea>
+            <textarea class="form-control" id="body" name="body" rows="6"><?= set_value('body') ?></textarea>
         </div>
 
-        <button class="btn btn-accent" type="submit" name="submit">Create News Item</button>
+        <button class="btn btn-accent" type="submit" name="submit" style="justify-self:start;">Create News Item</button>
     </form>
 </section>

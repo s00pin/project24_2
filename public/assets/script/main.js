@@ -1,6 +1,8 @@
 $(function () {
     const $searchInput = $('#search-input');
     const $suggestions = $('#suggestions');
+    const menuToggle = document.getElementById('menu-toggle');
+    const siteNav = document.getElementById('site-nav');
 
     function normalizePosterUrl(path, size) {
         if (!path) {
@@ -25,6 +27,30 @@ $(function () {
 
         tabButtons.forEach((btn) => {
             btn.addEventListener('click', () => activate(btn.getAttribute('data-auth-tab')));
+        });
+    }
+
+    function initMenuToggle() {
+        if (!menuToggle || !siteNav) {
+            return;
+        }
+
+        menuToggle.addEventListener('click', () => {
+            const open = siteNav.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!siteNav.classList.contains('open')) {
+                return;
+            }
+
+            if (siteNav.contains(event.target) || menuToggle.contains(event.target)) {
+                return;
+            }
+
+            siteNav.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
         });
     }
 
@@ -541,6 +567,7 @@ $(function () {
     }
 
     initAuthTabs();
+    initMenuToggle();
     initConsentBanner();
     initSearch();
     initDetailActions();
