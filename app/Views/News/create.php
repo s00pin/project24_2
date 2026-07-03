@@ -1,13 +1,16 @@
-<section class="panel" style="max-width:780px;">
-    <div class="section-head">
-        <h3>Create News</h3>
-        <p>Add a new entry for the news section.</p>
-    </div>
+<section class="section-frame" style="max-width: 820px;">
+    <header class="section-head">
+        <div>
+            <p class="section-kicker">Newsroom</p>
+            <h3>Create news post</h3>
+        </div>
+        <p>Share an update with a clear title and useful context.</p>
+    </header>
 
     <?= session()->getFlashdata('error') ?>
     <?= validation_list_errors() ?>
 
-    <form action="/news" method="post" style="display:grid;gap:0.9rem;">
+    <form action="/news" method="post" class="form-grid">
         <?= csrf_field() ?>
 
         <div>
@@ -17,9 +20,9 @@
 
         <div>
             <label for="body" class="form-label">Text</label>
-            <textarea class="form-control" id="body" name="body" rows="6"><?= set_value('body') ?></textarea>
+            <textarea class="form-control" id="body" name="body" rows="8"><?= set_value('body') ?></textarea>
         </div>
 
-        <button class="btn btn-accent" type="submit" name="submit" style="justify-self:start;">Create News Item</button>
+        <button class="btn btn-primary" type="submit" name="submit">Create news item</button>
     </form>
 </section>

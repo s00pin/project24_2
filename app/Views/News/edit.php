@@ -1,12 +1,15 @@
-<section class="panel" style="max-width:780px;">
-    <div class="section-head">
-        <h3>Edit News</h3>
-        <p>Update title or text and save changes.</p>
-    </div>
+<section class="section-frame" style="max-width: 820px;">
+    <header class="section-head">
+        <div>
+            <p class="section-kicker">Newsroom</p>
+            <h3>Edit news post</h3>
+        </div>
+        <p>Update title or body and save your changes.</p>
+    </header>
 
     <?= \Config\Services::validation()->listErrors() ?>
 
-    <form action="/news/update/<?= esc($news['id']) ?>" method="post" style="display:grid;gap:0.9rem;">
+    <form action="/news/update/<?= esc($news['id']) ?>" method="post" class="form-grid">
         <?= csrf_field() ?>
 
         <div>
@@ -16,9 +19,9 @@
 
         <div>
             <label for="body" class="form-label">Body</label>
-            <textarea class="form-control" id="body" name="body" rows="6"><?= esc($news['body']) ?></textarea>
+            <textarea class="form-control" id="body" name="body" rows="8"><?= esc($news['body']) ?></textarea>
         </div>
 
-        <button class="btn btn-accent" type="submit" name="submit" style="justify-self:start;">Update News Item</button>
+        <button class="btn btn-primary" type="submit" name="submit">Update news item</button>
     </form>
 </section>

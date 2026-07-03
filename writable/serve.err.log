@@ -1,0 +1,67 @@
+[Fri Jul  3 02:43:35 2026] PHP 8.3.32 Development Server (http://127.0.0.1:8081) started
+[Fri Jul  3 02:43:43 2026] 127.0.0.1:54336 Accepted
+[Fri Jul  3 02:43:44 2026] 127.0.0.1:54336 Closing
+[Fri Jul  3 02:44:22 2026] 127.0.0.1:33460 Accepted
+[Fri Jul  3 02:44:22 2026] 127.0.0.1:31104 Accepted
+[Fri Jul  3 02:44:22 2026] 127.0.0.1:33460 Closing
+[Fri Jul  3 02:44:22 2026] 127.0.0.1:31104 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:22 2026] 127.0.0.1:31104 Closing
+[Fri Jul  3 02:44:28 2026] 127.0.0.1:20977 Accepted
+[Fri Jul  3 02:44:28 2026] 127.0.0.1:1508 Accepted
+[Fri Jul  3 02:44:28 2026] 127.0.0.1:20977 Closing
+[Fri Jul  3 02:44:29 2026] 127.0.0.1:1508 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:29 2026] 127.0.0.1:1508 Closing
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:33585 Accepted
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:15349 Accepted
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:33585 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:33585 Closing
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:15349 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:15349 Closing
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:34755 Accepted
+[Fri Jul  3 02:44:35 2026] 127.0.0.1:34755 Closing
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:26042 Accepted
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:6678 Accepted
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:26042 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:26042 Closing
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:36228 Accepted
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:6678 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:6678 Closing
+[Fri Jul  3 02:44:44 2026] 127.0.0.1:36228 Closing
+[Fri Jul  3 02:44:50 2026] 127.0.0.1:38783 Accepted
+[Fri Jul  3 02:44:50 2026] 127.0.0.1:21805 Accepted
+[Fri Jul  3 02:44:50 2026] 127.0.0.1:38783 Closing
+[Fri Jul  3 02:44:50 2026] 127.0.0.1:21805 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:44:50 2026] 127.0.0.1:21805 Closing
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:2587 Accepted
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:58052 Accepted
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:2587 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:2587 Closing
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:58052 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:58052 Closing
+[Fri Jul  3 02:45:05 2026] 127.0.0.1:17833 Accepted
+[Fri Jul  3 02:45:06 2026] 127.0.0.1:17833 Closing
+[Fri Jul  3 02:45:11 2026] 127.0.0.1:39165 Accepted
+[Fri Jul  3 02:45:11 2026] 127.0.0.1:29453 Accepted
+[Fri Jul  3 02:45:11 2026] 127.0.0.1:39165 Closing
+[Fri Jul  3 02:45:11 2026] 127.0.0.1:29453 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:11 2026] 127.0.0.1:29453 Closing
+[Fri Jul  3 02:45:18 2026] 127.0.0.1:27527 Accepted
+[Fri Jul  3 02:45:18 2026] 127.0.0.1:17481 Accepted
+[Fri Jul  3 02:45:18 2026] 127.0.0.1:27527 Closing
+[Fri Jul  3 02:45:18 2026] 127.0.0.1:17481 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:18 2026] 127.0.0.1:17481 Closing
+[Fri Jul  3 02:45:26 2026] 127.0.0.1:30714 Accepted
+[Fri Jul  3 02:45:26 2026] 127.0.0.1:36783 Accepted
+[Fri Jul  3 02:45:27 2026] 127.0.0.1:30714 Closing
+[Fri Jul  3 02:45:27 2026] 127.0.0.1:36783 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:27 2026] 127.0.0.1:36783 Closing
+[Fri Jul  3 02:45:32 2026] 127.0.0.1:9924 Accepted
+[Fri Jul  3 02:45:32 2026] 127.0.0.1:48441 Accepted
+[Fri Jul  3 02:45:32 2026] 127.0.0.1:9924 Closing
+[Fri Jul  3 02:45:32 2026] 127.0.0.1:48441 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:45:32 2026] 127.0.0.1:48441 Closing
+[Fri Jul  3 02:46:08 2026] 127.0.0.1:5206 Accepted
+[Fri Jul  3 02:46:08 2026] 127.0.0.1:5206 [200]: GET /assets/css/main.css
+[Fri Jul  3 02:46:08 2026] 127.0.0.1:5206 Closing
+[Fri Jul  3 02:46:08 2026] 127.0.0.1:5207 Accepted
+[Fri Jul  3 02:46:08 2026] 127.0.0.1:5207 Closing

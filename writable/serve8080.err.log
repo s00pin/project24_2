@@ -1,0 +1,395 @@
+[Fri Jul  3 02:46:48 2026] PHP 8.3.32 Development Server (http://127.0.0.1:8080) started
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:42302 Accepted
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:23962 Accepted
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:42302 Closing
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:23962 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:23962 Closing
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:38568 Accepted
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:46989 Accepted
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:38568 [200]: GET /assets/css/main.css?v=1783039112
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:46989 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:38568 Closing
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:46989 Closing
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:13397 Accepted
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:13397 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:47:08 2026] 127.0.0.1:13397 Closing
+[Fri Jul  3 02:47:09 2026] 127.0.0.1:14789 Accepted
+[Fri Jul  3 02:47:09 2026] 127.0.0.1:14789 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:09 2026] 127.0.0.1:14789 Closing
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:15981 Accepted
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:7649 Accepted
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:15981 Closing
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:33364 Accepted
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:33364 [200]: GET /assets/css/main.css?v=1783039112
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:15939 Accepted
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:15939 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:33364 Closing
+[Fri Jul  3 02:47:10 2026] 127.0.0.1:15939 Closing
+[Fri Jul  3 02:47:11 2026] 127.0.0.1:3675 Accepted
+[Fri Jul  3 02:47:11 2026] 127.0.0.1:3675 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:47:11 2026] 127.0.0.1:3675 Closing
+[Fri Jul  3 02:47:12 2026] 127.0.0.1:7649 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:12 2026] 127.0.0.1:7649 Closing
+[Fri Jul  3 02:47:12 2026] 127.0.0.1:2373 Accepted
+[Fri Jul  3 02:47:12 2026] 127.0.0.1:65517 Accepted
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:2373 Closing
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:65517 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:65517 Closing
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:6847 Accepted
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:6847 [200]: GET /assets/css/main.css?v=1783039112
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:33627 Accepted
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:27501 Accepted
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:33627 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:27501 [200]: GET /assets/image/logo.png
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:6847 Closing
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:33627 Closing
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:27501 Closing
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:18075 Accepted
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:18075 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:47:13 2026] 127.0.0.1:18075 Closing
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:5440 Accepted
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:59697 Accepted
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:5440 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:5440 Closing
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:59697 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:59697 Closing
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:7750 Accepted
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:7750 Closing
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:38346 Accepted
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:40018 Accepted
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:38346 [200]: GET /assets/css/main.css?v=1783039112
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:40018 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:38346 Closing
+[Fri Jul  3 02:47:15 2026] 127.0.0.1:40018 Closing
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:41880 Accepted
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:41880 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:41880 Closing
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:45411 Accepted
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:45411 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:16 2026] 127.0.0.1:45411 Closing
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:15814 Accepted
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:49801 Accepted
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:15814 Closing
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:49801 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:49801 Closing
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:25729 Accepted
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:16970 Accepted
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:25729 [200]: GET /assets/css/main.css?v=1783039112
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:58423 Accepted
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:16970 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:58423 [200]: GET /assets/image/logo.png
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:25729 Closing
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:16970 Closing
+[Fri Jul  3 02:47:17 2026] 127.0.0.1:58423 Closing
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:31272 Accepted
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:31272 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:31272 Closing
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:3909 Accepted
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:3909 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:47:18 2026] 127.0.0.1:3909 Closing
+[Fri Jul  3 02:53:37 2026] 127.0.0.1:5378 Accepted
+[Fri Jul  3 02:53:37 2026] 127.0.0.1:5378 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:12091 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:37183 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:12091 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:12091 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:37183 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:37183 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:41419 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:41419 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:52889 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:13976 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:52889 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:13976 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:52889 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:13976 Closing
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:59512 Accepted
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:59512 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:53:59 2026] 127.0.0.1:59512 Closing
+[Fri Jul  3 02:54:00 2026] 127.0.0.1:31106 Accepted
+[Fri Jul  3 02:54:00 2026] 127.0.0.1:31106 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:00 2026] 127.0.0.1:31106 Closing
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:59276 Accepted
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:18762 Accepted
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:59276 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:59276 Closing
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:18762 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:18762 Closing
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:57628 Accepted
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:57628 Closing
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:57518 Accepted
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:27167 Accepted
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:57518 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:27167 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:57518 Closing
+[Fri Jul  3 02:54:01 2026] 127.0.0.1:27167 Closing
+[Fri Jul  3 02:54:02 2026] 127.0.0.1:65021 Accepted
+[Fri Jul  3 02:54:02 2026] 127.0.0.1:65021 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:54:02 2026] 127.0.0.1:65021 Closing
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:57950 Accepted
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:63300 Accepted
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:57950 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:57950 Closing
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:40710 Accepted
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:63300 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:03 2026] 127.0.0.1:63300 Closing
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:40710 Closing
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:59327 Accepted
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:59327 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:31905 Accepted
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:62912 Accepted
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:31905 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:62912 [200]: GET /assets/image/logo.png
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:59327 Closing
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:31905 Closing
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:62912 Closing
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:18195 Accepted
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:18195 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:54:04 2026] 127.0.0.1:18195 Closing
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:46999 Accepted
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:49462 Accepted
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:46999 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:46999 Closing
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:49462 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:49462 Closing
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:65145 Accepted
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:65145 Closing
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:61404 Accepted
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:54981 Accepted
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:61404 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:54981 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:61404 Closing
+[Fri Jul  3 02:54:06 2026] 127.0.0.1:54981 Closing
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:43258 Accepted
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:43258 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:43258 Closing
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:23550 Accepted
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:23550 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:07 2026] 127.0.0.1:23550 Closing
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:17707 Accepted
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:3926 Accepted
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:17707 Closing
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:3926 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:3926 Closing
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:52374 Accepted
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:1311 Accepted
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:52374 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:44463 Accepted
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:1311 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:44463 [200]: GET /assets/image/logo.png
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:52374 Closing
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:1311 Closing
+[Fri Jul  3 02:54:08 2026] 127.0.0.1:44463 Closing
+[Fri Jul  3 02:54:09 2026] 127.0.0.1:44543 Accepted
+[Fri Jul  3 02:54:09 2026] 127.0.0.1:44543 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:54:09 2026] 127.0.0.1:44543 Closing
+[Fri Jul  3 02:54:09 2026] 127.0.0.1:49302 Accepted
+[Fri Jul  3 02:54:10 2026] 127.0.0.1:49302 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:54:10 2026] 127.0.0.1:49302 Closing
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:36358 Accepted
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:60558 Accepted
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:36358 Closing
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:60558 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:60558 Closing
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:41401 Accepted
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:45156 Accepted
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:41401 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:45156 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:41401 Closing
+[Fri Jul  3 02:58:12 2026] 127.0.0.1:45156 Closing
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:53191 Accepted
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:53191 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:53191 Closing
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:37478 Accepted
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:37478 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:58:13 2026] 127.0.0.1:37478 Closing
+[Fri Jul  3 02:58:14 2026] 127.0.0.1:20392 Accepted
+[Fri Jul  3 02:58:14 2026] 127.0.0.1:49985 Accepted
+[Fri Jul  3 02:58:14 2026] 127.0.0.1:20392 Closing
+[Fri Jul  3 02:58:14 2026] 127.0.0.1:49985 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:58:14 2026] 127.0.0.1:49985 Closing
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:11647 Accepted
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:11647 Closing
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:28343 Accepted
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:1525 Accepted
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:28343 [200]: GET /assets/css/main.css?v=1783039995
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:1525 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:28343 Closing
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:1525 Closing
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:34371 Accepted
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:34371 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:34371 Closing
+[Fri Jul  3 02:58:15 2026] 127.0.0.1:45300 Accepted
+[Fri Jul  3 02:58:16 2026] 127.0.0.1:45300 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 02:58:16 2026] 127.0.0.1:45300 Closing
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:9515 Accepted
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:59842 Accepted
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:9515 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:9515 Closing
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:59842 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:59842 Closing
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:11345 Accepted
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:11345 Closing
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:50889 Accepted
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:22107 Accepted
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:50889 [200]: GET /assets/css/main.css?v=1783041609
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:22107 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:50889 Closing
+[Fri Jul  3 03:21:20 2026] 127.0.0.1:22107 Closing
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:31580 Accepted
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:31580 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:31580 Closing
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:22296 Accepted
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:22296 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:21 2026] 127.0.0.1:22296 Closing
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:59539 Accepted
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:39682 Accepted
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:59539 Closing
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:39682 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:39682 Closing
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:56865 Accepted
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:56865 [200]: GET /assets/css/main.css?v=1783041609
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:35795 Accepted
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:35795 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:56865 Closing
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:35795 Closing
+[Fri Jul  3 03:21:22 2026] 127.0.0.1:51859 Accepted
+[Fri Jul  3 03:21:23 2026] 127.0.0.1:51859 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:21:23 2026] 127.0.0.1:51859 Closing
+[Fri Jul  3 03:21:24 2026] 127.0.0.1:30198 Accepted
+[Fri Jul  3 03:21:24 2026] 127.0.0.1:36102 Accepted
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:30198 Closing
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:36102 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:36102 Closing
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:61080 Accepted
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:1310 Accepted
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:34045 Accepted
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:61080 [200]: GET /assets/css/main.css?v=1783041609
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:1310 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:34045 [200]: GET /assets/image/logo.png
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:61080 Closing
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:1310 Closing
+[Fri Jul  3 03:21:25 2026] 127.0.0.1:34045 Closing
+[Fri Jul  3 03:21:26 2026] 127.0.0.1:34382 Accepted
+[Fri Jul  3 03:21:26 2026] 127.0.0.1:34382 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:21:26 2026] 127.0.0.1:34382 Closing
+[Fri Jul  3 03:21:26 2026] 127.0.0.1:4665 Accepted
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:4665 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:4665 Closing
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:30064 Accepted
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:45852 Accepted
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:30064 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:30064 Closing
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:45852 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:45852 Closing
+[Fri Jul  3 03:21:27 2026] 127.0.0.1:31404 Accepted
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:31404 Closing
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:25311 Accepted
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:9788 Accepted
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:25311 [200]: GET /assets/css/main.css?v=1783041609
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:23912 Accepted
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:9788 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:23912 [200]: GET /assets/image/logo.png
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:25311 Closing
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:9788 Closing
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:23912 Closing
+[Fri Jul  3 03:21:28 2026] 127.0.0.1:1831 Accepted
+[Fri Jul  3 03:21:29 2026] 127.0.0.1:1831 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:29 2026] 127.0.0.1:1831 Closing
+[Fri Jul  3 03:21:29 2026] 127.0.0.1:43344 Accepted
+[Fri Jul  3 03:21:29 2026] 127.0.0.1:43344 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:21:29 2026] 127.0.0.1:43344 Closing
+[Fri Jul  3 03:21:30 2026] 127.0.0.1:13670 Accepted
+[Fri Jul  3 03:21:30 2026] 127.0.0.1:13670 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:30 2026] 127.0.0.1:13670 Closing
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:1427 Accepted
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:9829 Accepted
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:1427 Closing
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:9829 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:9829 Closing
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:55996 Accepted
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:65447 Accepted
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:55996 [200]: GET /assets/css/main.css?v=1783041609
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:65447 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:55996 Closing
+[Fri Jul  3 03:21:31 2026] 127.0.0.1:65447 Closing
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:42025 Accepted
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:42025 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:42025 Closing
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:53999 Accepted
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:53999 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:21:32 2026] 127.0.0.1:53999 Closing
+[Fri Jul  3 03:32:03 2026] 127.0.0.1:63451 Accepted
+[Fri Jul  3 03:32:03 2026] 127.0.0.1:15339 Accepted
+[Fri Jul  3 03:32:03 2026] 127.0.0.1:63451 Closing
+[Fri Jul  3 03:32:03 2026] 127.0.0.1:15339 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:03 2026] 127.0.0.1:15339 Closing
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:56460 Accepted
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:37149 Accepted
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:56460 [200]: GET /assets/css/main.css?v=1783042237
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:37149 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:56460 Closing
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:37149 Closing
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:42727 Accepted
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:42727 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:42727 Closing
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:27383 Accepted
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:27383 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:04 2026] 127.0.0.1:27383 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:45537 Accepted
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:45537 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:42188 Accepted
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:42188 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:42188 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:55544 Accepted
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:55544 [200]: GET /assets/css/main.css?v=1783042237
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:1090 Accepted
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:13756 Accepted
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:1090 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:13756 [200]: GET /assets/image/logo.png
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:55544 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:1090 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:13756 Closing
+[Fri Jul  3 03:32:06 2026] 127.0.0.1:45713 Accepted
+[Fri Jul  3 03:32:07 2026] 127.0.0.1:45713 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:32:07 2026] 127.0.0.1:45713 Closing
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:43548 Accepted
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:54299 Accepted
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:43548 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:43548 Closing
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:54299 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:54299 Closing
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:62086 Accepted
+[Fri Jul  3 03:32:08 2026] 127.0.0.1:62086 Closing
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:16610 Accepted
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:40171 Accepted
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:16610 [200]: GET /assets/css/main.css?v=1783042237
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:40171 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:16610 Closing
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:40171 Closing
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:22495 Accepted
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:22495 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:22495 Closing
+[Fri Jul  3 03:32:09 2026] 127.0.0.1:31373 Accepted
+[Fri Jul  3 03:32:10 2026] 127.0.0.1:31373 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:10 2026] 127.0.0.1:31373 Closing
+[Fri Jul  3 03:32:10 2026] 127.0.0.1:22372 Accepted
+[Fri Jul  3 03:32:10 2026] 127.0.0.1:28540 Accepted
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:22372 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:22372 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:28540 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:28540 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:43081 Accepted
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:43081 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41856 Accepted
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:16835 Accepted
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41856 [200]: GET /assets/css/main.css?v=1783042237
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:16835 [200]: GET /assets/script/main.js?v=1783039153
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41856 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:16835 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41328 Accepted
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41328 [200]: GET /assets/image/logo.ico
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:41328 Closing
+[Fri Jul  3 03:32:11 2026] 127.0.0.1:27328 Accepted
+[Fri Jul  3 03:32:12 2026] 127.0.0.1:27328 Closed without sending a request; it was probably just an unused speculative preconnection
+[Fri Jul  3 03:32:12 2026] 127.0.0.1:27328 Closing

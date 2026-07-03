@@ -1,12 +1,14 @@
-<section class="panel">
-    <div class="section-head">
-        <h3>Pages Home Route</h3>
-        <p>This route is available from the pages controller.</p>
-    </div>
-    <p class="text-light-emphasis">Open the primary home route to view featured titles, rankings, and the latest catalog summary.</p>
+<section class="section-frame" style="max-width: 860px;">
+    <header class="section-head">
+        <div>
+            <p class="section-kicker">Pages route</p>
+            <h3>Quick navigation</h3>
+        </div>
+    </header>
+    <p class="text-muted">Use the primary routes below for the full redesigned experience.</p>
     <div class="hero-actions">
-        <a class="btn btn-accent" href="<?= base_url('home') ?>">Open Main Home</a>
-        <a class="btn btn-outline-light" href="<?= base_url('media') ?>">Open Movies</a>
-        <a class="btn btn-outline-light" href="<?= base_url('show') ?>">Open Shows</a>
+        <a class="btn btn-primary" href="<?= base_url('home') ?>">Home</a>
+        <a class="btn btn-ghost" href="<?= base_url('media') ?>">Movies</a>
+        <a class="btn btn-ghost" href="<?= base_url('show') ?>">Shows</a>
     </div>
 </section>
