@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Project24 auto sync every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Unit=project24-autosync.service
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

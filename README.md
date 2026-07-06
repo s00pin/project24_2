@@ -19,6 +19,15 @@ php spark migrate
 php spark db:seed DatabaseSeeder
 ```
 
+Optional TMDB catalog import command:
+
+```bash
+php spark catalog:import-popular --movies 100 --shows 100
+```
+
+Ubuntu auto-sync setup (GitHub -> server):
+- See `ops/AUTO_SYNC_SETUP.md`
+
 Demo login:
 - Username: `demo`
 - Password: `Demo@123`

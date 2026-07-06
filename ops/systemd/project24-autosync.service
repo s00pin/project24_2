@@ -1,0 +1,23 @@
+[Unit]
+Description=Project24 auto sync from GitHub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=swopnil
+Group=swopnil
+WorkingDirectory=/var/www/projects/codeigniter
+ExecStart=/var/www/projects/codeigniter/scripts/server-sync-from-github.sh
+
+# Override these if needed with: sudo systemctl edit project24-autosync.service
+Environment=REPO_DIR=/var/www/projects/codeigniter
+Environment=BRANCH=master
+Environment=AUTO_IMPORT_ENABLED=1
+Environment=AUTO_IMPORT_ONLY_IF_EMPTY=1
+Environment=AUTO_IMPORT_MOVIES=80
+Environment=AUTO_IMPORT_SHOWS=80
+
+[Install]
+WantedBy=multi-user.target
+
