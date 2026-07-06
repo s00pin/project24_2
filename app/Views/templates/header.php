@@ -91,13 +91,13 @@ $headerQuery = trim((string) ($query ?? ''));
                     <a class="site-link <?= str_starts_with($navPath, 'show') ? 'active' : '' ?>" href="<?= base_url('show'); ?>">Shows</a>
                     <a class="site-link <?= str_starts_with($navPath, 'search') ? 'active' : '' ?>" href="<?= base_url('search'); ?>">Search</a>
                     <a class="site-link <?= str_starts_with($navPath, 'news') ? 'active' : '' ?>" href="<?= base_url('news'); ?>">News</a>
-                    <button class="btn btn-ghost btn-sm theme-toggle" type="button" id="theme-toggle" aria-pressed="false">Dark mode</button>
+                    <button class="btn btn-ghost btn-sm nav-btn theme-toggle" type="button" id="theme-toggle" aria-pressed="false">Dark mode</button>
                     <?php if ($isLoggedIn): ?>
                         <a class="site-link <?= str_starts_with($navPath, 'dashboard') ? 'active' : '' ?>" href="<?= base_url('dashboard'); ?>">Dashboard</a>
                         <span class="user-chip"><?= esc($username) ?></span>
-                        <a class="btn btn-ghost btn-sm" href="<?= base_url('logout'); ?>">Logout</a>
+                        <a class="btn btn-ghost btn-sm nav-btn logout-btn" href="<?= base_url('logout'); ?>">Logout</a>
                     <?php else: ?>
-                        <a class="btn btn-ghost btn-sm" href="<?= base_url('login'); ?>">Login</a>
+                        <a class="btn btn-ghost btn-sm nav-btn login-btn" href="<?= base_url('login'); ?>">Login</a>
                     <?php endif; ?>
                 </nav>
             </div>

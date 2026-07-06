@@ -110,8 +110,8 @@ img {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: 0.9rem;
-    padding: 0.75rem 0;
+    gap: 1.2rem;
+    padding: 0.82rem 0;
 }
 
 .brand-lockup {
@@ -177,7 +177,7 @@ img {
     width: 100%;
     justify-content: flex-end;
     align-items: center;
-    gap: 1rem;
+    gap: 1.15rem;
 }
 
 .quick-search {
@@ -185,9 +185,9 @@ img {
     display: flex;
     align-items: center;
     gap: 0.35rem;
-    flex: 1 1 260px;
-    min-width: 220px;
-    max-width: 360px;
+    flex: 0 1 360px;
+    min-width: 240px;
+    max-width: 380px;
 }
 
 .search-input {
@@ -271,17 +271,27 @@ img {
     margin-left: auto;
     justify-content: flex-end;
     flex-wrap: nowrap;
-    gap: 0.78rem;
+    gap: 0.34rem;
+    padding: 0.22rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg-soft);
     white-space: nowrap;
 }
 
 .site-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: var(--ink-soft);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
-    padding: 0.2rem 0;
-    border-bottom: 2px solid transparent;
+    min-height: 34px;
+    padding: 0.34rem 0.66rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: background-color 0.14s var(--ease), border-color 0.14s var(--ease), color 0.14s var(--ease);
     white-space: nowrap;
 }
 
@@ -289,17 +299,59 @@ img {
 .site-link:focus-visible,
 .site-link.active {
     color: var(--ink);
-    border-bottom-color: var(--ink);
+    border-color: var(--line-strong);
+    background: var(--surface-raised);
 }
 
 .user-chip {
     border-radius: 999px;
-    background: var(--ghost-bg);
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
     padding: 0.28rem 0.6rem;
     font-family: "DM Mono", monospace;
     font-size: 0.66rem;
     letter-spacing: 0.07em;
     text-transform: uppercase;
+}
+
+.site-nav .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    border: 1px solid transparent;
+    padding: 0.34rem 0.72rem;
+    font-size: 0.76rem;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.site-nav .nav-btn:hover {
+    transform: none;
+}
+
+.site-nav .theme-toggle {
+    min-width: 102px;
+}
+
+.site-nav .logout-btn {
+    color: var(--accent-dark);
+    background: rgba(192, 72, 47, 0.13);
+}
+
+.site-nav .logout-btn:hover,
+.site-nav .logout-btn:focus-visible {
+    background: rgba(192, 72, 47, 0.21);
+}
+
+:root[data-theme="dark"] .site-nav .logout-btn {
+    color: #ffd0c4;
+    background: rgba(211, 102, 72, 0.24);
+}
+
+:root[data-theme="dark"] .site-nav .logout-btn:hover,
+:root[data-theme="dark"] .site-nav .logout-btn:focus-visible {
+    background: rgba(211, 102, 72, 0.34);
 }
 
 .btn {
@@ -1458,12 +1510,28 @@ code {
 }
 
 @media (max-width: 1240px) {
+    .site-nav-wrap {
+        gap: 0.7rem;
+    }
+
+    .quick-search {
+        min-width: 210px;
+        flex-basis: 300px;
+    }
+
     .site-nav {
-        gap: 0.58rem;
+        gap: 0.22rem;
+        padding: 0.2rem;
     }
 
     .site-link {
-        font-size: 0.88rem;
+        font-size: 0.84rem;
+        padding: 0.3rem 0.58rem;
+    }
+
+    .site-nav .nav-btn {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
     }
 
     .user-chip {
@@ -1550,26 +1618,32 @@ code {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 0.46rem;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
         white-space: normal;
     }
 
-    .site-link {
+    .site-link,
+    .site-nav .nav-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 38px;
+        min-height: 40px;
         font-size: 0.9rem;
-        border-bottom: 0;
         border: 1px solid var(--line);
         border-radius: 999px;
         background: var(--bg-soft);
-        padding: 0.4rem 0.66rem;
+        padding: 0.42rem 0.7rem;
+        text-decoration: none;
     }
 
     .site-link.active,
     .site-link:hover,
-    .site-link:focus-visible {
-        border-bottom-color: var(--line);
+    .site-link:focus-visible,
+    .site-nav .nav-btn:hover,
+    .site-nav .nav-btn:focus-visible {
         border-color: var(--line-strong);
         background: var(--ghost-bg);
     }
@@ -1579,10 +1653,19 @@ code {
     }
 
     .theme-toggle,
-    .site-nav .btn {
+    .site-nav .btn,
+    .site-nav .nav-btn {
         width: 100%;
         min-width: 0;
-        min-height: 38px;
+        min-height: 40px;
+    }
+
+    .site-nav .logout-btn {
+        border-color: rgba(192, 72, 47, 0.36);
+    }
+
+    :root[data-theme="dark"] .site-nav .logout-btn {
+        border-color: rgba(211, 102, 72, 0.42);
     }
 
     .user-chip {
