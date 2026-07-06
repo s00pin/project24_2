@@ -72,7 +72,7 @@ img {
 
 .header-shell {
     display: grid;
-    grid-template-columns: auto auto minmax(0, 1fr);
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
     gap: 0.9rem;
     padding: 0.75rem 0;
@@ -140,6 +140,7 @@ img {
 .site-nav-wrap {
     min-width: 0;
     display: flex;
+    width: 100%;
     justify-content: flex-end;
     align-items: center;
     gap: 0.8rem;
@@ -150,7 +151,9 @@ img {
     display: flex;
     align-items: center;
     gap: 0.35rem;
-    width: min(420px, 100%);
+    flex: 1 1 320px;
+    min-width: 220px;
+    max-width: 420px;
 }
 
 .search-input {
@@ -231,9 +234,11 @@ img {
 .site-nav {
     display: flex;
     align-items: center;
+    margin-left: auto;
     justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.65rem;
+    white-space: nowrap;
 }
 
 .site-link {
@@ -242,6 +247,7 @@ img {
     font-size: 0.8rem;
     padding: 0.2rem 0;
     border-bottom: 2px solid transparent;
+    white-space: nowrap;
 }
 
 .site-link:hover,
@@ -1410,6 +1416,8 @@ code {
 
     .site-nav {
         justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: normal;
     }
 
     .landing-minimal {
