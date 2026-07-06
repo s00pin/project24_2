@@ -71,6 +71,12 @@
             closeMenu();
         });
 
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
         siteNav.querySelectorAll("a").forEach((link) => {
             link.addEventListener("click", closeMenu);
         });
@@ -80,6 +86,8 @@
                 closeMenu();
             }
         });
+
+        closeMenu();
     }
 
     function initThemeToggle() {
