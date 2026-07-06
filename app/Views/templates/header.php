@@ -23,6 +23,7 @@ $kickerMap = [
 $pageTitle = (string) ($title ?? 'Reel Atlas');
 $pageKicker = $kickerMap[$routeRoot] ?? 'Media Hub';
 $bodyClass = 'route-' . preg_replace('/[^a-z0-9-]+/', '-', str_replace('/', '-', $navPath));
+$headerQuery = trim((string) ($query ?? ''));
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,6 +33,18 @@ $bodyClass = 'route-' . preg_replace('/[^a-z0-9-]+/', '-', str_replace('/', '-',
     <meta name="description" content="Reel Atlas movie and TV discovery workspace">
     <meta name="author" content="Swopnil Sapkota">
     <title><?= esc($pageTitle) ?> | Reel Atlas</title>
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark' || savedTheme === 'light') {
+                    document.documentElement.setAttribute('data-theme', savedTheme);
+                }
+            } catch (error) {
+                // Ignore localStorage access issues.
+            }
+        })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Bungee&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -44,7 +57,7 @@ $bodyClass = 'route-' . preg_replace('/[^a-z0-9-]+/', '-', str_replace('/', '-',
     <header class="site-header">
         <div class="shell header-shell">
             <a class="brand-lockup" href="<?= base_url('home'); ?>" aria-label="Reel Atlas home">
-                <span class="brand-mark" aria-hidden="true"></span>
+                <img class="brand-icon" src="<?= base_url('assets/image/logo.png'); ?>" alt="" aria-hidden="true">
                 <span class="brand-lines">
                     <strong>Reel Atlas</strong>
                     <small>find, track, and remember what to watch</small>
@@ -58,12 +71,14 @@ $bodyClass = 'route-' . preg_replace('/[^a-z0-9-]+/', '-', str_replace('/', '-',
             <div class="site-nav-wrap" id="site-nav">
                 <form class="quick-search" action="<?= base_url('search') ?>" method="get" role="search">
                     <label class="sr-only" for="search-input">Search titles</label>
+                    <input type="hidden" name="sort" value="random">
                     <input
                         id="search-input"
                         class="search-input"
                         type="search"
                         name="query"
                         placeholder="Search films, series, and keywords"
+                        value="<?= esc($headerQuery) ?>"
                         autocomplete="off"
                     >
                     <button class="btn btn-primary btn-sm" type="submit">Search</button>
@@ -76,6 +91,7 @@ $bodyClass = 'route-' . preg_replace('/[^a-z0-9-]+/', '-', str_replace('/', '-',
                     <a class="site-link <?= str_starts_with($navPath, 'show') ? 'active' : '' ?>" href="<?= base_url('show'); ?>">Shows</a>
                     <a class="site-link <?= str_starts_with($navPath, 'search') ? 'active' : '' ?>" href="<?= base_url('search'); ?>">Search</a>
                     <a class="site-link <?= str_starts_with($navPath, 'news') ? 'active' : '' ?>" href="<?= base_url('news'); ?>">News</a>
+                    <button class="btn btn-ghost btn-sm theme-toggle" type="button" id="theme-toggle" aria-pressed="false">Dark mode</button>
                     <?php if ($isLoggedIn): ?>
                         <a class="site-link <?= str_starts_with($navPath, 'dashboard') ? 'active' : '' ?>" href="<?= base_url('dashboard'); ?>">Dashboard</a>
                         <span class="user-chip"><?= esc($username) ?></span>

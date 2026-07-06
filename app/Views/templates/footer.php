@@ -10,6 +10,7 @@ $jsVersion = is_file($jsAssetPath) ? (string) filemtime($jsAssetPath) : (string)
             <div class="footer-copy">
                 <p>Reel Atlas</p>
                 <small>Your personal index for movies and shows, with likes, lists, and regional watch providers.</small>
+                <small>&copy; <?= esc(date('Y')) ?> Swopnil Sapkota. Built and maintained at swop-nil.com.</small>
             </div>
             <nav class="footer-nav" aria-label="Footer">
                 <a href="<?= base_url('home'); ?>">Home</a>

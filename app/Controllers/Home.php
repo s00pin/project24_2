@@ -12,6 +12,8 @@ class Home extends BaseController
         $mediaModel = model(MediaModel::class);
         $showModel = model(ShowModel::class);
         $db = db_connect();
+        $allMovies = array_values($mediaModel->getMedia());
+        $allShows = array_values($showModel->getShow());
 
         $popularMovies = $db->table('media m')
             ->select('m.*, COUNT(ul.id) AS likes_count')
@@ -33,10 +35,13 @@ class Home extends BaseController
             ->get()
             ->getResultArray();
 
+        $featuredMovies = $this->randomSubset($allMovies, 8);
+        $featuredShows = $this->randomSubset($allShows, 8);
+
         $data = [
             'title' => 'Home',
-            'featuredMovies' => array_slice($mediaModel->getMedia(), 0, 4),
-            'featuredShows' => array_slice($showModel->getShow(), 0, 4),
+            'featuredMovies' => $featuredMovies,
+            'featuredShows' => $featuredShows,
             'popularMovies' => $popularMovies,
             'popularShows' => $popularShows,
         ];
@@ -44,5 +49,17 @@ class Home extends BaseController
         return view('templates/header', $data)
             . view('welcome_message', $data)
             . view('templates/footer');
+    }
+
+    private function randomSubset(array $items, int $limit): array
+    {
+        if ($items === [] || $limit <= 0) {
+            return [];
+        }
+
+        $pool = array_values($items);
+        shuffle($pool);
+
+        return array_slice($pool, 0, min($limit, count($pool)));
     }
 }

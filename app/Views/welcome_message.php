@@ -34,7 +34,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
         <a class="scroll-link" href="#home-content">See curated picks below</a>
     </div>
 
-    <?php if (!empty($heroMovie)): ?>
+    <?php if (! empty($heroMovie)): ?>
         <a class="landing-feature" href="<?= base_url('media/' . esc((string) $heroMovie['id'], 'url')); ?>">
             <img
                 src="<?= esc($posterUrl($heroMovie['poster_image'] ?? null, 'w500')) ?>"
@@ -45,7 +45,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
             <div>
                 <p class="feature-kicker">Tonight's pick</p>
                 <h3><?= esc($heroMovie['title'] ?? 'Untitled movie') ?></h3>
-                <p><?= !empty($heroMovie['release_date']) ? esc(substr((string) $heroMovie['release_date'], 0, 4)) : 'Movie' ?></p>
+                <p><?= ! empty($heroMovie['release_date']) ? esc(substr((string) $heroMovie['release_date'], 0, 4)) : 'Movie' ?></p>
             </div>
         </a>
     <?php endif; ?>
@@ -60,7 +60,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
         <a class="section-link" href="<?= base_url('media') ?>">View all movies</a>
     </header>
 
-    <?php if (!empty($featuredMovies)): ?>
+    <?php if (! empty($featuredMovies)): ?>
         <div class="poster-flow" role="list">
             <?php foreach ($featuredMovies as $movie): ?>
                 <a class="media-tile" role="listitem" href="<?= base_url('media/' . esc((string) $movie['id'], 'url')); ?>">
@@ -71,7 +71,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
                         onerror="this.onerror=null;this.src='<?= esc(base_url('assets/image/logo.png')) ?>';"
                     >
                     <span class="media-title"><?= esc($movie['title'] ?? 'Untitled movie') ?></span>
-                    <span class="media-meta">Movie<?= !empty($movie['release_date']) ? ' - ' . esc(substr((string) $movie['release_date'], 0, 4)) : '' ?></span>
+                    <span class="media-meta">Movie<?= ! empty($movie['release_date']) ? ' - ' . esc(substr((string) $movie['release_date'], 0, 4)) : '' ?></span>
                 </a>
             <?php endforeach; ?>
         </div>
@@ -92,7 +92,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
         <a class="section-link" href="<?= base_url('show') ?>">View all shows</a>
     </header>
 
-    <?php if (!empty($featuredShows)): ?>
+    <?php if (! empty($featuredShows)): ?>
         <div class="poster-flow" role="list">
             <?php foreach ($featuredShows as $show): ?>
                 <a class="media-tile" role="listitem" href="<?= base_url('show/' . esc((string) $show['id'], 'url')); ?>">
@@ -103,7 +103,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
                         onerror="this.onerror=null;this.src='<?= esc(base_url('assets/image/logo.png')) ?>';"
                     >
                     <span class="media-title"><?= esc($show['title'] ?? 'Untitled show') ?></span>
-                    <span class="media-meta">Show<?= !empty($show['begin_date']) ? ' - ' . esc(substr((string) $show['begin_date'], 0, 4)) : '' ?></span>
+                    <span class="media-meta">Show<?= ! empty($show['begin_date']) ? ' - ' . esc(substr((string) $show['begin_date'], 0, 4)) : '' ?></span>
                 </a>
             <?php endforeach; ?>
         </div>
@@ -130,7 +130,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
                 <li>
                     <a href="<?= base_url('media/' . esc((string) $movie['id'], 'url')); ?>">
                         <strong><?= esc($movie['title'] ?? 'Untitled movie') ?></strong>
-                        <span>Movie · <?= esc((string) ($movie['likes_count'] ?? 0)) ?> likes</span>
+                        <span>Movie - <?= esc((string) ($movie['likes_count'] ?? 0)) ?> likes</span>
                     </a>
                 </li>
             <?php endforeach; ?>
@@ -141,7 +141,7 @@ $heroMovie = $featuredMovies[0] ?? $popularMovies[0] ?? null;
                 <li>
                     <a href="<?= base_url('show/' . esc((string) $show['id'], 'url')); ?>">
                         <strong><?= esc($show['title'] ?? 'Untitled show') ?></strong>
-                        <span>Show · <?= esc((string) ($show['likes_count'] ?? 0)) ?> likes</span>
+                        <span>Show - <?= esc((string) ($show['likes_count'] ?? 0)) ?> likes</span>
                     </a>
                 </li>
             <?php endforeach; ?>
